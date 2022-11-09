@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:48:33 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/09 12:38:03 by yallo            ###   ########.fr       */
+/*   Created: 2022/11/09 12:40:04 by yallo             #+#    #+#             */
+/*   Updated: 2022/11/09 13:28:41 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
+unsigned int    strlcat(char *restrict dst, const char restrict src, unsigned int dstsize)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+    unsigned int
 }
