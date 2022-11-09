@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:48:33 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/09 14:29:16 by yallo            ###   ########.fr       */
+/*   Created: 2022/11/09 14:13:51 by yallo             #+#    #+#             */
+/*   Updated: 2022/11/09 14:27:58 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
-{
-	unsigned int	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+void *ft_memset(void *pointer, int value, size_t count)
+{
+
 }
