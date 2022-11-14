@@ -6,11 +6,13 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:13:51 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/14 13:13:42 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/14 13:25:54 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *src, int value, unsigned int len)
+#include "libft.h"
+
+void	*ft_memset(void *src, int value, size_t len)
 {
 	int				i;
 	unsigned char	*buf;

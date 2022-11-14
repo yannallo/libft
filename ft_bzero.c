@@ -6,11 +6,13 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:13:10 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/14 13:13:17 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/14 13:25:51 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *src, unsigned int n)
+#include "libft.h"
+
+void	ft_bzero(void *src, size_t n)
 {
 	int				i;
 	unsigned char	*buf;

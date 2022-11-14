@@ -6,12 +6,14 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 12:34:32 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/14 12:58:44 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/14 13:25:53 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, unsigned int n)
+
+#include "libft.h"
+
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    
-    return (dst);
+
 }
