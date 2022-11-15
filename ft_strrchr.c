@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 16:38:11 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/15 14:44:15 by yallo            ###   ########.fr       */
+/*   Created: 2022/11/15 15:05:55 by yallo             #+#    #+#             */
+/*   Updated: 2022/11/15 15:30:34 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+char *ft_strrchr(char *s, int c)
 {
     int i;
-	
-	if (dst)
-    while (i < dstsize - strlen(dst) - 1)
+
+    i = strlen(s) + 1;
+    while (i >= 0)
     {
-        
+        if (s[i] == c)
+            return(s+i);
         i++;
     }
-    return(strlen(src) + strlen(dst));
-}
-
-int main(void)
-{
-    char src[] = "les gars";
-    char dst[] = "Bonjour ";
-    ft_strlcat(dst, src, 16);
-    puts(dst);
-    return (0);
+    return (NULL);
 }
