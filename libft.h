@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:16:47 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/14 14:10:32 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/15 15:34:01 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 void			*ft_memcpy(void *dst, const void *src, size_t size);
 void			*ft_memmove(void *dst, const void *src, size_t len);
+char			*ft_strchr(char *s ,int c);
+char			*ft_strrchr(char *s, int c);
 
 #endif

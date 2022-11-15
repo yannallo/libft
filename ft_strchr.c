@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:33:31 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/15 15:25:57 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/15 15:32:40 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,4 @@ char *ft_strchr(char *s ,int c)
         i++;
     }
     return (NULL);
-}
-
-int main (void)
-{
-    char *s = "abcdefghijklmnopqrstuvxyz";
-    char c = 'h';
-    printf("%s", ft_strchr(s, c));
-    return (0);
 }
