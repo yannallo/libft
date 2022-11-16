@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:16:47 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/16 14:47:34 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/16 15:52:45 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 void			*ft_memset(void *src, int value, size_t len);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t			ft_strlen(const char *s);
+size_t			ft_strlen(char *s);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 void			*ft_memcpy(void *dst, const void *src, size_t size);
