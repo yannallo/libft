@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:09:06 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/15 15:29:05 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/16 14:37:26 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int				i;
-	unsigned char	temp;
+	size_t			i;
+	unsigned char	temp[len];
 	unsigned char	*src2;
 	unsigned char	*dst2;
 
@@ -24,8 +24,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	dst2 = (unsigned char *) dst;
 	while (i < len)
 	{
-		temp = src2[i];
-		dst2[i] = temp;
+		temp[i] = src2[i];
+		i++;
+	}
+	i = 0;
+	while (i < len)
+	{
+		dst2[i] = temp[i];
 		i++;
 	}
 	return (dst);

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yallo <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:31:56 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/07 15:46:40 by yallo            ###   ########lyon.fr   */
+/*   Created: 2022/11/16 12:54:56 by yallo             #+#    #+#             */
+/*   Updated: 2022/11/16 13:28:07 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int c)
+int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= ' ' && c <= '~')
 		return (1);
 	else
 		return (0);

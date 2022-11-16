@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:13:10 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/14 13:25:51 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/16 13:40:08 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *src, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*buf;
 
 	buf = (unsigned char *) src;
