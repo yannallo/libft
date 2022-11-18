@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 16:38:11 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 15:37:00 by yallo            ###   ########.fr       */
+/*   Created: 2022/11/18 14:21:30 by yallo             #+#    #+#             */
+/*   Updated: 2022/11/18 15:01:27 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, char *src, size_t dstsize)
+char	*ft_strnstr(char *str, char *needle, size_t size)
 {
-    size_t i;
-	size_t size_s;
-    size_t size_d;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    size_s = ft_strlen(src);
-    size_d = ft_strlen(dst);
-	if (dstsize >= size_d + size_s)
+	i = 0;
+	while (str[i] != '\0' && i < size)
 	{
-		while (i < dstsize - size_d - 1)
-		{
-			dst[i + size_d] = src[i];
-			i++;
-		}
+		j = 0;
+		while (str[i + j] == needle[j])
+			j++;
+		if (j == ft_strlen(needle) && i + j < size)
+			return (str + i);
+		i++;
 	}
-    return(size_s + size_d);
+	return (NULL);
 }

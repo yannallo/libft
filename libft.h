@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:16:47 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 11:08:00 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/18 15:05:16 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,11 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
 char			*ft_strchr(char *s ,int c);
 char			*ft_strrchr(char *s, int c);
 size_t			ft_strlcat(char *dst, char *src, size_t dstsize);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
+char			*ft_strdup(char *str);
+void			*ft_memchr( const void * haystack, int needle, size_t size );
+int				ft_memcmp(const void *p1, const void *p2, size_t size);
+char			*ft_strnstr(char *str, char *needle, size_t size);
+void			*ft_calloc(size_t count, size_t size);
 
 #endif

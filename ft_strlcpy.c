@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:44:48 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 10:47:03 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/18 11:23:23 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 
 	i = 0;
 	if (dstsize == 0)
-		return (0);
+		return (ft_strlen(src));
 	while (i != dstsize - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];

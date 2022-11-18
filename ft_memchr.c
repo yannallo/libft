@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 16:38:11 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 15:37:00 by yallo            ###   ########.fr       */
+/*   Created: 2022/11/18 13:33:26 by yallo             #+#    #+#             */
+/*   Updated: 2022/11/18 13:59:57 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, char *src, size_t dstsize)
+void	*ft_memchr( const void *haystack, int needle, size_t size)
 {
-    size_t i;
-	size_t size_s;
-    size_t size_d;
+	size_t	i;
+	char	*str;
 
-    i = 0;
-    size_s = ft_strlen(src);
-    size_d = ft_strlen(dst);
-	if (dstsize >= size_d + size_s)
+	i = 0;
+	str = (char *)haystack;
+	while (i < size)
 	{
-		while (i < dstsize - size_d - 1)
-		{
-			dst[i + size_d] = src[i];
-			i++;
-		}
+		if (str[i] == needle)
+			return (str + i);
+		i++;
 	}
-    return(size_s + size_d);
+	return (NULL);
 }
