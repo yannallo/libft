@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:05:55 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/16 15:53:31 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/18 11:08:50 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char *ft_strrchr(char *s, int c)
     while (i >= 0)
     {
         if (s[i] == c)
+        {
             return(s+i);
+        }
         i++;
     }
     return (NULL);
@@ -32,4 +34,4 @@ int main(void)
     char s[] = "abcdefedcba";
     ft_strrchr(s, 'e');
     return(0);
-}
+}   

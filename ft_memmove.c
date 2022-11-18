@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:09:06 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/16 15:41:37 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/18 10:47:37 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		i++;
 	}
 	return (dst);
-}
-
-int main(void)
-{
-	char src[] = "lorem ipsum dolor sit amet";
-	char dst[8];
-	ft_memmove(dst, src, 8);
-	printf("%s", dst);
-	return (0);
 }
