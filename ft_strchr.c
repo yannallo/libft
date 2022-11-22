@@ -6,18 +6,18 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:33:31 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 14:18:50 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/22 12:52:30 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < strlen(s) + 1)
+	while (i < ft_strlen(s) + 1)
 	{
 		if (s[i] == c)
 			return (s + i);

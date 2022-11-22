@@ -6,19 +6,21 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 10:34:48 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 13:04:57 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/22 13:12:03 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *str)
+char	*ft_strdup(const char *str)
 {
-	int		i;
+	size_t	i;
 	char	*buf;
 
 	i = 0;
 	buf = malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (!(buf))
+		return (0);
 	while (str[i] != '\0')
 	{
 		buf[i] = str[i];

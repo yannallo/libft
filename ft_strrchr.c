@@ -6,15 +6,15 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:05:55 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/18 15:02:09 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/22 13:12:25 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = ft_strlen(s);
 	while (i >= 0)
