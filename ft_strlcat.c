@@ -6,38 +6,27 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:38:11 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/22 15:50:18 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/23 10:58:52 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcat(char *s1, const char *s2, size_t n)
 {
-    size_t i;
-	size_t size_s;
-    size_t size_d;
+	size_t i;
+	size_t j;
 
-    i = 0;
-    size_s = ft_strlen(src);
-    size_d = ft_strlen(dst);
-
-	while (i < dstsize - size_d - 1)while (i < dstsize - size_d - 1)
-		{
-			dst[i + size_d] = src[i];
-			i++;
-		}
+	i = 0;
+	while (s1[i] != '\0' && i < n)
+		i++;
+	j = i;
+	while (s2[i - j] != '\0' && i < n - 1)
 	{
-		dst[i + size_d] = src[i];
+		s1[i] = s2[i - j];
 		i++;
 	}
-	dst[i + size_d] = '\0';
-	return (size_s + size_d);
-}
-
-int main(void)
-{
-	char dst[14] = "Bonjour lamis";
-	printf("\n%zu", ft_strlcat(dst, "lorem ipsum dolor sit amet", 15));
-	return (0);
+	if (j < n)
+		s1[i] = '\0';
+	return (j + ft_strlen(s2));
 }
