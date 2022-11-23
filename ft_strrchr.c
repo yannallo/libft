@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:05:55 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/22 16:30:46 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/23 13:23:26 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,16 @@
 
 char	*ft_strrchr(char *s, int c)
 {
-	size_t	i;
+	int				i;
+	unsigned char	needle;
 
 	i = ft_strlen(s);
-	while (s[i] != '\0' || i >= 0)
+	needle = (unsigned char)c;
+	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == needle)
 			return (s + i);
 		i--;
 	}
-	return (NULL);
-}
-
-/*int main(void)
-{
-	char str[] = "tripouille";
-	puts(ft_strrchr(str, 't'));
 	return (0);
-}*/
+}

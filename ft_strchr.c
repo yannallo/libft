@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:33:31 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/22 13:31:36 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/23 11:42:08 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 char	*ft_strchr(char *s, int c)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	needle;
 
 	i = 0;
+	needle = (unsigned char)c;
 	while (i < ft_strlen(s) + 1)
 	{
-		if (s[i] == c)
+		if (s[i] == needle)
 			return (s + i);
 		i++;
 	}
