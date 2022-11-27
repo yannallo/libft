@@ -16,21 +16,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*buf;
 
-//	if (start >= ft_strlen(s))
-//		return (NULL);
+	if (start + len > ft_strlen(s) || len == 0)
+		return (s);
 	if (len > ft_strlen(&s[start]))
 		len = ft_strlen(&s[start]);
-	buf = malloc((len - start + 1) * sizeof(char));
+	buf = malloc(sizeof(char) * (len + 1));
 	if (!(buf))
 		return (NULL);
 	ft_memcpy(buf, &s[start], len);
 	buf[len] = '\0';
 	return (buf);
 }
-
-/*int main(void)
-{
-	char *str2 = substr("i just want this part #############", 5, 10);
-	puts(str2);
-	return (0);
-}*/
