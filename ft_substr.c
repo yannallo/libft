@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:30:40 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/23 15:16:49 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/28 09:08:41 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*buf;
 
-	if (start + len > ft_strlen(s) || len == 0)
-		return (s);
-	if (len > ft_strlen(&s[start]))
+	if (start > ft_strlen(s) + 1)
+	{
+		start = ft_strlen(s) + 1;
+		len = 0;
+	}
+	else if (len > ft_strlen(&s[start]))
 		len = ft_strlen(&s[start]);
-	buf = malloc(sizeof(char) * (len + 1));
+	buf = malloc(sizeof(char) * len + 1);
 	if (!(buf))
 		return (NULL);
 	ft_memcpy(buf, &s[start], len);

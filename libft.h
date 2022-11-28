@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:16:47 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/23 15:14:33 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/28 14:38:58 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char			*ft_strnstr(char *str, const char *needle, size_t size);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_itoa(int n);
 
 #endif
