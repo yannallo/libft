@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:33:26 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/23 11:41:39 by yallo            ###   ########.fr       */
+/*   Updated: 2022/11/29 14:34:18 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *haystack, int needle, size_t size)
 	unsigned char	n;
 
 	i = 0;
-	str = (char *)haystack;
+	str = (unsigned char *)haystack;
 	n = (char)needle;
 	while (i < size)
 	{
