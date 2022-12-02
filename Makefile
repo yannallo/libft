@@ -2,6 +2,8 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
+CC = gcc
+
 HEADERS = libft.h
 
 SRC = ft_atoi.c ft_bzero.c ft_isalnum.c \
@@ -13,7 +15,7 @@ ft_strrchr.c ft_tolower.c ft_toupper.c\
 ft_strdup.c ft_memchr.c ft_memcmp.c\
 ft_strnstr.c ft_calloc.c ft_substr.c\
 ft_strjoin.c ft_substr.c ft_itoa.c\
-ft_strtrim.c
+ft_strtrim.c ft_split.c ft_strmapi.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -21,7 +23,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(FLAGS) $(OBJ) -o $(NAME)
-	ar rcs $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)
@@ -30,3 +32,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean $(NAME)
+
+.PHONY : all clean fclean re
