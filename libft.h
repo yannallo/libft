@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:16:47 by yallo             #+#    #+#             */
-/*   Updated: 2022/11/30 15:42:05 by yallo            ###   ########.fr       */
+/*   Updated: 2022/12/02 14:42:37 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *src, size_t n);
@@ -46,5 +47,10 @@ char			*ft_itoa(int n);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
