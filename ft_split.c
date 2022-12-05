@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:58:30 by yallo             #+#    #+#             */
-/*   Updated: 2022/12/03 16:03:57 by yallo            ###   ########.fr       */
+/*   Updated: 2022/12/05 10:24:34 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	count_nbr_word(char const *s, char c)
 	return (count);
 }
 
-char	*free_array(char **array)
+void	*free_array(char **array)
 {
 	while (*array != NULL)
 	{
