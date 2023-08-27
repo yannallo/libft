@@ -6,13 +6,13 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:58:30 by yallo             #+#    #+#             */
-/*   Updated: 2022/12/05 10:24:34 by yallo            ###   ########.fr       */
+/*   Updated: 2023/08/27 17:27:47 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_nbr_word(char const *s, char c)
+static size_t	count_nbr_word(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -34,7 +34,7 @@ size_t	count_nbr_word(char const *s, char c)
 	return (count);
 }
 
-void	*free_array(char **array)
+static void	*free_array(char **array)
 {
 	while (*array != NULL)
 	{
@@ -45,7 +45,7 @@ void	*free_array(char **array)
 	return (NULL);
 }
 
-char	**fill_array(char const *s, char c, char **array)
+static char	**fill_array(char const *s, char c, char **array)
 {
 	size_t	i;
 	size_t	word;

@@ -6,13 +6,13 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 09:31:37 by yallo             #+#    #+#             */
-/*   Updated: 2022/12/02 14:28:46 by yallo            ###   ########.fr       */
+/*   Updated: 2023/08/27 17:26:56 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count(long int nbr)
+static int	count(long int nbr)
 {
 	int	i;
 	int	sign;
