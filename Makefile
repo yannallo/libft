@@ -1,31 +1,32 @@
 NAME = libft.a
 
+CC = gcc
 FLAG = -Wall -Wextra -Werror
 
-HEADERS = libft.h
-
-SRC_DIR = libft
-
+SRC_DIR = src
 OBJ_DIR = obj
+HEADER = libft.h
 
 SRC = $(wildcard $(SRC_DIR)/*.c)
-
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) Makefile
 	ar rc $(NAME) $(OBJ)
 
-%.o: %.c $(HEADERS) Makefile
-	$(CC) $(FLAG) -c $< -o $@ -I .
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER) Makefile | $(OBJ_DIR)
+	$(CC) $(FLAG) -c $< -o $@
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
-.PHONY : all bonus clean fclean re
+.PHONY : all clean fclean re
