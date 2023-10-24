@@ -6,13 +6,13 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:35:14 by yallo             #+#    #+#             */
-/*   Updated: 2023/08/29 19:52:08 by yallo            ###   ########.fr       */
+/*   Updated: 2023/10/24 14:18:26 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	size_t	i;
 	long	result;
@@ -38,5 +38,5 @@ int	ft_atoi(const char *str)
 			return (-1);
 		i++;
 	}
-	return ((int)(result * sign));
+	return ((result * sign));
 }

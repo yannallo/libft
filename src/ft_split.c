@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:58:30 by yallo             #+#    #+#             */
-/*   Updated: 2023/08/29 19:53:57 by yallo            ###   ########.fr       */
+/*   Updated: 2023/10/24 11:38:58 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static size_t	count_nbr_word(char const *s, char c)
 			i++;
 			count++;
 			while (s[i] && s[i] != c)
-			i++;
+				i++;
 		}
 		else
 			i++;
