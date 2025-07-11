@@ -10,17 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t n, size_t size)
 {
-	char	*buf;
+	void	*ptr;
+	size_t	total;
 
-	if (size != 0 && count > SIZE_MAX / size)
-		return (NULL);
-	buf = malloc(count * size);
-	if (!(buf))
-		return (NULL);
-	ft_bzero(buf, size * count);
-	return (buf);
+	if (size != 0 && n > SIZE_MAX / size)
+		return NULL;
+	total = n * size;
+	if (total == 0)
+		total = 1;
+	ptr = malloc(total);
+	if (!ptr)
+		return NULL;
+	ft_bzero(ptr, total);
+	return ptr;
 }
