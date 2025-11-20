@@ -4,7 +4,7 @@
 ## A library with standard C functions
 This project is the first step of the 42 curriculum.
 It aims to implement your own standard C library and improve your knowledge of basic C (data types, memory).
-This library will be reused during your 42 cursus.
+This library will be reused during the 42 cursus.
 
 ## Function
 | Category | Examples |
