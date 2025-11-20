@@ -1,12 +1,14 @@
 # Libft
-![Status](https://img.shields.io/badge/status-finished-success)
-![Language](https://img.shields.io/badge/language-C-blue)
-## A library with standard C functions
+![Status](https://img.shields.io/badge/Status-Finished-success)
+![Language](https://img.shields.io/badge/Language-C-blue)
+![Norminette](https://img.shields.io/badge/Norminette-%E2%9C%93%0A-success)
+
+## A library of standard C functions
 This project is the first step of the 42 curriculum.
 It aims to implement your own standard C library and improve your knowledge of basic C (data types, memory).
 This library will be reused during the 42 cursus.
 
-## Function
+## Functions
 | Category | Examples |
 |----------|----------|
 | Memory |`memset`, `memcpy`, `bzero`, `calloc`|
@@ -16,29 +18,25 @@ This library will be reused during the 42 cursus.
 | Linked list |`lstnew`, `lstadd_back`, `lstsize`|
 
 ## Installation
-Bash
-```
-# Clone depot
+
+```bash
+# Clone repo
 git clone https://github.com/yannallo/libft.git
 
-# Enter directory
-cd libft
-
 # Build library
-make
+make -C libft
 ```
 
 ## Usage
 At this point you should have a libft.a (Archive containing all the object file).
-You will need to include "libft.h" and link during compiling.
-e.g:
+You will need to include "libft.h" and link the library when compiling.
 
-Bash
+```Bash
+gcc -Ilibft main.c -Llibft -lft -o test
 ```
-gcc -I./ main.c -Llibft -lft
-```
-main.c
-```
+
+### main.c
+```C
 #include "libft.h"
 #include <stdio.h>
 
